@@ -1,9 +1,13 @@
 .blueprint-checkbox,
+.blueprint-checkbox-no-label,
 .blueprint-defaults,
 .blueprint-radio-button,
+.blueprint-radio-button-no-label,
 .label-for-blueprint-checkbox,
-.label-for-blueprint-radio-button {
-    font-family: Montserrat;
+.label-for-blueprint-radio-button,
+.label-of-blueprint-checkbox-no-label,
+.label-of-blueprint-radio-button-no-label {
+    font-family: Montserrat, sans-serif;
     font-size: 14px;
     color: #2980B9;
     background-color: #FFF;
@@ -26,7 +30,7 @@
 }
 
 .blueprint-alt-defaults {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 14px;
     color: #FFF;
     background-color: #3498DB;
@@ -648,11 +652,6 @@ input.blueprint-alt-defaults.blueprint-button-glass:active {
             box-sizing: border-box
 }
 
-.label-for-blueprint-checkbox>label,
-.label-for-blueprint-radio-button>label {
-    margin-left: 25px
-}
-
 .pui-cal.pui-cal-blueprint-date-field:hover {
     background-color: rgba(41, 128, 185, .3)
 }
@@ -661,7 +660,7 @@ input.blueprint-alt-defaults.blueprint-button-glass:active {
 .pui-calendar.pui-calendar-blueprint-date-field * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 12px
 }
@@ -731,12 +730,16 @@ input.blueprint-alt-defaults.blueprint-button-glass:active {
     margin-right: 10px
 }
 
+.blueprint-combo-box-combo-options>.combo-option,
+.blueprint-combo-box-combo-options>.combo-option-select {
+    font-family: Montserrat, sans-serif
+}
+
 .label-for-blueprint-checkbox {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/blueprint/blank-checkbox-light-blue.png);
     background-repeat: no-repeat;
     background-color: transparent;
-    background-position: 1px center;
+    background-position: -2px center;
     height: 20px;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px);
@@ -745,7 +748,14 @@ input.blueprint-alt-defaults.blueprint-button-glass:active {
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center
+            align-items: center;
+    padding: 1px;
+    margin: 1px
+}
+
+.label-for-blueprint-checkbox>label {
+    margin-left: 25px;
+    background: 0 0
 }
 
 input.blueprint-checkbox {
@@ -753,16 +763,16 @@ input.blueprint-checkbox {
     opacity: 0;
     display: block;
     cursor: pointer;
-    width: 18px;
-    height: 18px
+    width: 20px;
+    height: 20px;
+    margin: 1px !important
 }
 
 .label-for-blueprint-radio-button,
 input.blueprint-checkbox:checked+.label-for-blueprint-checkbox {
-    height: 20px;
     background-repeat: no-repeat;
-    padding: 3px;
-    background-position: 1px center;
+    background-position: -2px center;
+    margin: 1px;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px)
 }
@@ -786,29 +796,40 @@ input.blueprint-checkbox:focus+.label-for-blueprint-checkbox {
 .label-for-blueprint-radio-button {
     background-image: url(/profoundui/proddata/images/widgetsets/blueprint/blank-radio-button-light-blue.png);
     background-color: transparent;
+    height: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center
+            align-items: center;
+    padding: 1px
+}
+
+.label-for-blueprint-radio-button>label {
+    margin-left: 25px;
+    background: 0 0
+}
+
+input.blueprint-checkbox-no-label,
+input.blueprint-radio-button,
+input.blueprint-radio-button-no-label {
+    margin: 1px !important;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    z-index: 20;
+    opacity: 0
 }
 
 input.blueprint-radio-button {
-    z-index: 20;
-    opacity: 0;
-    display: block;
-    cursor: pointer;
-    width: 18px;
-    height: 18px
+    display: block
 }
 
 input.blueprint-radio-button:checked+.label-for-blueprint-radio-button {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/blueprint/radio-button-light-blue.png);
     background-repeat: no-repeat;
-    background-position: 1px center;
-    height: 20px;
+    background-position: -2px center;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px)
 }
@@ -826,11 +847,11 @@ input.blueprint-radio-button:focus+.label-for-blueprint-radio-button {
 }
 
 .label-for-blueprint-checkbox-no-label {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/blueprint/blank-checkbox-light-blue.png);
     background-repeat: no-repeat;
     background-color: transparent;
-    background-position: 1px center;
+    background-position: center;
+    width: 20px;
     height: 20px;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px);
@@ -839,31 +860,27 @@ input.blueprint-radio-button:focus+.label-for-blueprint-radio-button {
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center
+            align-items: center;
+    padding: 1px
 }
 
 .label-for-blueprint-checkbox-no-label>label {
     color: transparent;
+    background: 0 0;
     overflow: hidden;
     width: 20px;
     height: 20px
 }
 
 input.blueprint-checkbox-no-label {
-    z-index: 20;
-    opacity: 0;
-    display: block;
-    cursor: pointer;
-    width: 22px;
-    height: 22px;
-    margin: 2px
+    display: block
 }
 
 input.blueprint-checkbox-no-label:checked+.label-for-blueprint-checkbox-no-label {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/blueprint/checkbox-light-blue.png);
     background-repeat: no-repeat;
-    background-position: 1px center;
+    background-position: center;
+    width: 20px;
     height: 20px;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px)
@@ -882,11 +899,11 @@ input.blueprint-checkbox-no-label:focus+.label-for-blueprint-checkbox-no-label {
 }
 
 .label-for-blueprint-radio-button-no-label {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/blueprint/blank-radio-button-light-blue.png);
     background-repeat: no-repeat;
     background-color: transparent;
-    background-position: 1px center;
+    background-position: center;
+    width: 20px;
     height: 20px;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px);
@@ -895,31 +912,27 @@ input.blueprint-checkbox-no-label:focus+.label-for-blueprint-checkbox-no-label {
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center
+            align-items: center;
+    padding: 1px
 }
 
 .label-for-blueprint-radio-button-no-label>label {
     color: transparent;
+    background: 0 0;
     overflow: hidden;
     width: 20px;
     height: 20px
 }
 
 input.blueprint-radio-button-no-label {
-    z-index: 20;
-    opacity: 0;
-    display: block;
-    cursor: pointer;
-    width: 22px;
-    height: 22px;
-    margin: 2px
+    display: block
 }
 
 input.blueprint-radio-button-no-label:checked+.label-for-blueprint-radio-button-no-label {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/blueprint/radio-button-light-blue.png);
     background-repeat: no-repeat;
-    background-position: 1px center;
+    background-position: center;
+    width: 20px;
     height: 20px;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px)
@@ -987,7 +1000,7 @@ input.blueprint-radio-button-no-label:focus+.label-for-blueprint-radio-button-no
 .blueprint-defaults[class^=blueprint-combo-box]>input {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 14px;
     padding-left: 5px;
     padding-right: 5px;
@@ -1025,12 +1038,7 @@ input.blueprint-radio-button-no-label:focus+.label-for-blueprint-radio-button-no
     margin-right: -2px !important
 }
 
-.blueprint-combo-box-combo-options>.combo-option {
-    font-family: Montserrat
-}
-
 .blueprint-combo-box-combo-options>.combo-option-select {
-    font-family: Montserrat;
     background: #3498DB;
     color: #FFF
 }
@@ -1462,7 +1470,7 @@ div.blueprint-file-upload div.control-box a.upload-files {
 
 .blueprint-defaults.blueprint-signature-pad>div {
     background: 0 0 !important;
-    font-family: Montserrat !important;
+    font-family: Montserrat, sans-serif !important;
     border: none !important;
     padding: 5px !important;
     color: #2980B9 !important;
@@ -1735,7 +1743,7 @@ div.blueprint-file-upload div.control-box a.upload-files {
 
 .blueprint-grid-paging-bar>span[style="font-family: Arial; font-size: 11px; font-weight: bold; vertical-align: top;"] {
     color: #2980B9;
-    font-family: Montserrat !important;
+    font-family: Montserrat, sans-serif !important;
     font-size: 14px !important;
     font-weight: 400 !important;
     margin: 15px;
@@ -2371,7 +2379,7 @@ input.office-copy-alt-defaults.office-copy-button-glass:active {
 .pui-calendar.pui-calendar-office-copy-date-field * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-weight: 400;
     font-size: 12px
 }
@@ -2399,6 +2407,16 @@ input.office-copy-alt-defaults.office-copy-button-glass:active {
 
 .pui-calendar-office-copy-date-field .brndrow2 {
     background-color: #4e4c5b
+}
+
+.label-for-office-copy-checkbox,
+.label-for-office-copy-checkbox-no-label {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+    padding: 1px;
+    height: 20px
 }
 
 .pui-calendar-office-copy-date-field .brndrow1 .brndrow1 span>img {
@@ -2440,34 +2458,21 @@ input.office-copy-alt-defaults.office-copy-button-glass:active {
     margin-right: 10px
 }
 
+.office-copy-combo-box-combo-options>.combo-option,
+.office-copy-combo-box-combo-options>.combo-option-select {
+    font-family: Montserrat, sans-serif
+}
+
 .label-for-office-copy-checkbox {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/office-copy/blank-checkbox-gray.png);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: 1px center;
-    height: 20px;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
+    background-position: -2px center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center
-}
-
-.label-for-office-copy-checkbox-no-label,
-.label-for-office-copy-radio-button {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
             align-items: center;
-    background-color: transparent;
-    padding: 3px;
-    background-repeat: no-repeat;
-    background-position: 1px center;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px)
+    margin: 1px
 }
 
 .label-for-office-copy-checkbox>label {
@@ -2479,16 +2484,16 @@ input.office-copy-checkbox {
     opacity: 0;
     display: block;
     cursor: pointer;
-    width: 18px;
-    height: 18px
+    height: 20px;
+    margin: 1px !important
 }
 
 input.office-copy-checkbox:checked+.label-for-office-copy-checkbox {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/office-copy/checkbox-gray.png);
     background-repeat: no-repeat;
-    background-position: 1px center;
+    background-position: -2px center;
     height: 20px;
+    margin: 1px;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px)
 }
@@ -2507,17 +2512,32 @@ input.office-copy-checkbox:focus+.label-for-office-copy-checkbox {
 
 .label-for-office-copy-checkbox-no-label {
     background-image: url(/profoundui/proddata/images/widgetsets/office-copy/blank-checkbox-gray.png);
-    height: 20px;
+    background-position: center;
+    width: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center
 }
 
 .label-for-office-copy-checkbox-no-label>label {
     color: transparent;
     overflow: hidden;
     width: 20px;
-    height: 20px
+    height: 20px;
+    background: 0 0
+}
+
+.label-for-office-copy-radio-button,
+.label-for-office-copy-radio-button-no-label {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    padding: 1px;
+    height: 20px;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px)
 }
 
 input.office-copy-checkbox-no-label {
@@ -2525,16 +2545,16 @@ input.office-copy-checkbox-no-label {
     opacity: 0;
     display: block;
     cursor: pointer;
-    width: 22px;
-    height: 22px;
-    margin: 2px
+    width: 20px;
+    height: 20px;
+    margin: 1px !important
 }
 
 input.office-copy-checkbox-no-label:checked+.label-for-office-copy-checkbox-no-label {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/office-copy/checkbox-gray.png);
     background-repeat: no-repeat;
-    background-position: 1px center;
+    background-position: center;
+    width: 20px;
     height: 20px;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px)
@@ -2554,10 +2574,14 @@ input.office-copy-checkbox-no-label:focus+.label-for-office-copy-checkbox-no-lab
 
 .label-for-office-copy-radio-button {
     background-image: url(/profoundui/proddata/images/widgetsets/office-copy/blank-radio-button-gray.png);
-    height: 20px;
+    background-position: -2px center;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1px
 }
 
 .label-for-office-copy-radio-button>label {
@@ -2569,15 +2593,14 @@ input.office-copy-radio-button {
     opacity: 0;
     display: block;
     cursor: pointer;
-    width: 18px;
-    height: 18px
+    height: 20px;
+    margin: 1px !important
 }
 
 input.office-copy-radio-button:checked+.label-for-office-copy-radio-button {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/office-copy/radio-button-gray.png);
     background-repeat: no-repeat;
-    background-position: 1px center;
+    background-position: -2px center;
     height: 20px;
     -webkit-transform: translateX(-20px);
             transform: translateX(-20px)
@@ -2596,14 +2619,9 @@ input.office-copy-radio-button:focus+.label-for-office-copy-radio-button {
 }
 
 .label-for-office-copy-radio-button-no-label {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/office-copy/blank-radio-button-gray.png);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: 1px center;
-    height: 20px;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
+    background-position: center;
+    width: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2614,6 +2632,7 @@ input.office-copy-radio-button:focus+.label-for-office-copy-radio-button {
 
 .label-for-office-copy-radio-button-no-label>label {
     color: transparent;
+    background: 0 0;
     overflow: hidden;
     width: 20px;
     height: 20px
@@ -2624,16 +2643,15 @@ input.office-copy-radio-button-no-label {
     opacity: 0;
     display: block;
     cursor: pointer;
-    width: 22px;
-    height: 22px;
-    margin: 2px
+    width: 20px;
+    height: 20px;
+    margin: 1px !important
 }
 
 input.office-copy-radio-button-no-label:checked+.label-for-office-copy-radio-button-no-label {
-    padding: 3px;
     background-image: url(/profoundui/proddata/images/widgetsets/office-copy/radio-button-gray.png);
     background-repeat: no-repeat;
-    background-position: 1px center;
+    background-position: center;
     width: 20px;
     height: 20px;
     -webkit-transform: translateX(-20px);
@@ -2702,7 +2720,7 @@ input.office-copy-radio-button-no-label:focus+.label-for-office-copy-radio-butto
 .office-copy-defaults[class^=office-copy-combo-box]>input {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 14px;
     padding-left: 5px;
     padding-right: 5px;
@@ -2732,12 +2750,7 @@ input.office-copy-radio-button-no-label:focus+.label-for-office-copy-radio-butto
     margin-right: -2px !important
 }
 
-.office-copy-combo-box-combo-options>.combo-option {
-    font-family: Montserrat
-}
-
 .office-copy-combo-box-combo-options>.combo-option-select {
-    font-family: Montserrat;
     background: #6c757d;
     color: #FFF
 }
@@ -3171,7 +3184,7 @@ div.office-copy-file-upload div.control-box a.upload-files {
 
 .office-copy-defaults.office-copy-signature-pad>div {
     background: 0 0 !important;
-    font-family: Montserrat !important;
+    font-family: Montserrat, sans-serif !important;
     border: none !important;
     padding: 5px !important;
     color: #4e4c5b !important;
@@ -3449,7 +3462,7 @@ div.office-copy-file-upload div.control-box a.upload-files {
 
 .office-copy-grid-paging-bar>span[style="font-family: Arial; font-size: 11px; font-weight: bold; vertical-align: top;"] {
     color: #4e4c5b;
-    font-family: Montserrat !important;
+    font-family: Montserrat, sans-serif !important;
     font-size: 14px !important;
     font-weight: 400 !important;
     margin: 15px;
