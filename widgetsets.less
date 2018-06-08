@@ -1696,7 +1696,7 @@ div.blueprint-file-upload div.control-box a.upload-files {
 .blueprint-grid .cell.header-cell {
     color: @flatwhite;
     background: @flatblue;
-    font-weight: 600;
+    font-weight: 400;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -1820,115 +1820,118 @@ div.blueprint-file-upload div.control-box a.upload-files {
 /*/ Grid Paging Bar /*/
 
 .blueprint-grid-paging-bar {
-    background: @flat30blue;
+    font-family: "Montserrat", sans-serif;
+    background: @flatblue;
     box-sizing: unset;
-    padding: 2px !important;
+    padding-top: 0px !important;
     height: 20px;
+    border: 1px solid @flatblue;
+    font-size: 14px;
+    color: @flatwhite;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin-top: -2px;
+    border-top-width: 2px;
 }
 
-.blueprint-grid-paging-bar .paging-link,
-.blueprint-grid-paging-bar .paging-link-disabled {
-    background-repeat: no-repeat;
-    text-align: left;
-}
-
-.bg.grid.blueprint-grid-paging-bar.paging-bar span:nth-child(5) {
-    margin-right: 25px !important;
+.blueprint-grid-paging-bar .paging-link {
+    color: @flatwhite;
+    position: unset!important;
 }
 
 .blueprint-grid-paging-bar .next-paging-link {
     text-align: right;
+    padding-left: 10px;
+}
+.blueprint-grid-paging-bar .previous-paging-link {
+    text-align: left;
+    padding-right: 10px;
 }
 
-.blueprint-grid-paging-bar .paging-link {
-    color: @flatblue;
-    position: unset !important;
+.blueprint-grid-paging-bar .next-image-icon {
+    background: transparent;
+    color: @flatwhite;
+    display: none;
+    margin-right: 5px;
+}
+
+.blueprint-grid-paging-bar .prev-image-icon {
+    background: transparent;
+    color: @flatwhite;
+    display: none;
+    margin-left: 10px;
 }
 
 .blueprint-grid-paging-bar .export-image-icon {
     position: unset !important;
     background: transparent;
-    margin-left: 15px !important;
+    margin-left: 5px !important;
 }
 
 .blueprint-grid-paging-bar .export-image-icon:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
-    color: @flatblue;
+    color: @flatwhite;
     content: "file_download";
 }
 
 .blueprint-grid-paging-bar .paging-link-disabled,
 .blueprint-grid-paging-bar .prev-image-icon-disabled,
 .blueprint-grid-paging-bar .next-image-icon-disabled {
-    color: greyscale(@flatblue);
+    color: @flatgray;
 }
 
-.blueprint-grid-paging-bar .next-image-icon,
-.blueprint-grid-paging-bar .prev-image-icon {
-    background: transparent;
-    color: @flatblue;
+.blueprint-grid-paging-bar>span:not(.paging-link):not(.paging-number) {
     display: none;
 }
 
-.blueprint-grid-paging-bar>span:not(.paging-link):not([style="font-family: Arial; font-size: 11px; font-weight: bold; vertical-align: top;"]) {
-    display: none;
-}
-
-.blueprint-grid-paging-bar>span[style="font-family: Arial; font-size: 11px; font-weight: bold; vertical-align: top;"] {
-    color: @flatblue;
+.blueprint-grid-paging-bar>span.paging-number {
+    color: @flatwhite;
     font-family: "Montserrat", sans-serif !important;
-    font-size: 14px !important;
-    font-weight: normal !important;
-    margin: 15px;
     flex-grow: 1;
-}
-
-.blueprint-grid-paging-bar .next-image-icon,
-.blueprint-grid-paging-bar .prev-image-icon {
-    background: transparent;
-}
-
-.blueprint-grid-paging-bar .next-image-icon {
-    margin-right: 15px !important;
-}
-
-.blueprint-grid-paging-bar .prev-image-icon {
-    margin-left: 15px;
+    margin: 0px;
 }
 
 .blueprint-grid-paging-bar .prev-image-icon:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
-    color: @flatblue;
-    content: "skip_previous";
+    color: @flatwhite;
+    padding-left: 2px;
+    content: "arrow_back_ios";
 }
 
 .blueprint-grid-paging-bar .next-image-icon:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
-    color: @flatblue;
-    content: "skip_next";
+    color: @flatwhite;
+    box-sizing: border-box;
+    padding-left: 5px;
+    content: "arrow_forward_ios";
 }
 
 .blueprint-grid-paging-bar .prev-image-icon.prev-image-icon-disabled:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
-    color: greyscale(@flatblue);
-    content: "skip_previous";
+    color: @flatgray;
+    content: "arrow_back_ios";
 }
 
 .blueprint-grid-paging-bar .next-image-icon.next-image-icon-disabled:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
-    color: greyscale(@flatblue);
-    content: "skip_next";
+    color: @flatgray;
+    content: "arrow_forward_ios";
 }
+
 
 /* ///////////////////  /
 /* End Blueprint Grid   /
@@ -2533,7 +2536,7 @@ input.office-copy-alt-defaults.office-copy-button-glass:active {
 .pui-calendar.pui-calendar-office-copy-date-field,
 .pui-calendar.pui-calendar-office-copy-date-field * {
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: normal;
     font-size: 12px;
 }
@@ -2891,7 +2894,7 @@ input.office-copy-radio-button-no-label:focus+.label-for-office-copy-radio-butto
 
 .office-copy-defaults[class^="office-copy-combo-box"]>input {
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     padding-left: 5px;
     padding-right: 5px;
@@ -2921,11 +2924,11 @@ input.office-copy-radio-button-no-label:focus+.label-for-office-copy-radio-butto
 }
 
 .office-copy-combo-box-combo-options>.combo-option {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .office-copy-combo-box-combo-options>.combo-option-select {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto", sans-serif;
     background: @officecopygray;
     color: @flatwhite;
 }
@@ -3391,7 +3394,7 @@ div.office-copy-file-upload div.control-box a.upload-files {
 
 .office-copy-defaults.office-copy-signature-pad>div {
     background: transparent !important;
-    font-family: "Montserrat", sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
     border: none !important;
     padding: 5px !important;
     color: @officecopyforeground  !important;
@@ -3493,7 +3496,7 @@ div.office-copy-file-upload div.control-box a.upload-files {
 .office-copy-grid .cell.header-cell {
     color: @flatwhite;
     background: @officecopyforeground;
-    font-weight: 600;
+    font-weight: 400;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -3618,114 +3621,117 @@ div.office-copy-file-upload div.control-box a.upload-files {
 /*/ Grid Paging Bar /*/
 
 .office-copy-grid-paging-bar {
-    background: @officecopylightgray;
+    font-family: "Roboto", sans-serif;
+    background: @officecopyforeground;
     box-sizing: unset;
-    padding: 2px !important;
-    height: 20px;
+    padding-top: 6px !important;
+    height: 25px;
+    border: 1px solid @officecopyforeground;
+    font-size: 14px;
+    color: @flatwhite;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 9px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    z-index: 9;
+    margin-top: -6px;
 }
 
-.office-copy-grid-paging-bar .paging-link,
-.office-copy-grid-paging-bar .paging-link-disabled {
-    background-repeat: no-repeat;
-    text-align: left;
-}
-
-.bg.grid.office-copy-grid-paging-bar.paging-bar span:nth-child(5) {
-    margin-right: 25px !important;
+.office-copy-grid-paging-bar .paging-link {
+    color: @flatwhite;
+    position: unset!important;
 }
 
 .office-copy-grid-paging-bar .next-paging-link {
     text-align: right;
+    padding-left: 10px;
+}
+.office-copy-grid-paging-bar .previous-paging-link {
+    text-align: left;
+    padding-right: 10px;
 }
 
-.office-copy-grid-paging-bar .paging-link {
-    color: @officecopyforeground;
-    position: unset !important;
+.office-copy-grid-paging-bar .next-image-icon {
+    background: transparent;
+    color: @flatwhite;
+    display: none;
+    margin-right: 5px;
+}
+
+.office-copy-grid-paging-bar .prev-image-icon {
+    background: transparent;
+    color: @flatwhite;
+    display: none;
+    margin-left: 10px;
 }
 
 .office-copy-grid-paging-bar .export-image-icon {
     position: unset !important;
     background: transparent;
-    margin-left: 15px !important;
+    margin-left: 5px !important;
 }
 
 .office-copy-grid-paging-bar .export-image-icon:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
-    color: @officecopyforeground;
+    color: @flatwhite;
     content: "file_download";
 }
 
 .office-copy-grid-paging-bar .paging-link-disabled,
 .office-copy-grid-paging-bar .prev-image-icon-disabled,
 .office-copy-grid-paging-bar .next-image-icon-disabled {
-    color: greyscale(@officecopyforeground);
+    color: lighten(@officecopygray, 10%);
 }
 
-.office-copy-grid-paging-bar .next-image-icon,
-.office-copy-grid-paging-bar .prev-image-icon {
-    background: transparent;
-    color: @officecopyforeground;
+.office-copy-grid-paging-bar>span:not(.paging-link):not(.paging-number) {
     display: none;
 }
 
-.office-copy-grid-paging-bar>span:not(.paging-link):not([style="font-family: Arial; font-size: 11px; font-weight: bold; vertical-align: top;"]) {
-    display: none;
-}
-
-.office-copy-grid-paging-bar>span[style="font-family: Arial; font-size: 11px; font-weight: bold; vertical-align: top;"] {
-    color: @officecopyforeground;
-    font-family: "Montserrat", sans-serif !important;
-    font-size: 14px !important;
-    font-weight: normal !important;
-    margin: 15px;
+.office-copy-grid-paging-bar>span.paging-number {
+    color: @flatwhite;
+    font-family: "Roboto", sans-serif !important;
     flex-grow: 1;
-}
-
-.office-copy-grid-paging-bar .next-image-icon,
-.office-copy-grid-paging-bar .prev-image-icon {
-    background: transparent;
-}
-
-.office-copy-grid-paging-bar .next-image-icon {
-    margin-right: 15px !important;
-}
-
-.office-copy-grid-paging-bar .prev-image-icon {
-    margin-left: 15px;
+    margin: 0px;
 }
 
 .office-copy-grid-paging-bar .prev-image-icon:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
-    color: @officecopyforeground;
-    content: "skip_previous";
+    color: @flatwhite;
+    padding-left: 2px;
+    content: "arrow_back_ios";
 }
 
 .office-copy-grid-paging-bar .next-image-icon:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
-    color: @officecopyforeground;
-    content: "skip_next";
+    color: @flatwhite;
+    box-sizing: border-box;
+    padding-left: 5px;
+    content: "arrow_forward_ios";
 }
 
 .office-copy-grid-paging-bar .prev-image-icon.prev-image-icon-disabled:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
-    text-rendering: optimizeLegibility;
-    color: greyscale(@officecopyforeground);
-    content: "skip_previous";
+    text-rendering: optimizeLegibility;    
+    color: lighten(@officecopygray, 10%);
+    content: "arrow_back_ios";
 }
 
 .office-copy-grid-paging-bar .next-image-icon.next-image-icon-disabled:after {
     font-family: "Material Icons";
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
-    color: greyscale(@officecopyforeground);
-    content: "skip_next";
+    color: lighten(@officecopygray, 10%);
+    content: "arrow_forward_ios";
 }
 
 /* /////////////////// */
