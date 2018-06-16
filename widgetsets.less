@@ -1709,10 +1709,17 @@ div.blueprint-file-upload div.control-box a.upload-files {
     display: flex;
     align-items: center;
     align-content: center;
+    padding: 3px!important; 
 }
 
 .blueprint-grid .header-cell>div {
-    letter-spacing: 1px;
+    letter-spacing: 1px;    
+    white-space: unset!important; 
+    position: unset!important; 
+    top: unset!important; 
+    margin-top: unset!important; 
+    left: unset!important; 
+    width: 100%!important; 
 }
 
 .blueprint-grid .header-cell>div>img[src='/profoundui/proddata/images/grids/descending.gif'] {
@@ -1742,6 +1749,11 @@ div.blueprint-file-upload div.control-box a.upload-files {
 }
 
 /*/ Grid Cells /*/
+.blueprint-grid .cell > div {
+    min-width: 100%;
+    padding: 0px!important;
+    text-overflow: ellipsis;
+}
 
 .blueprint-grid .cell.even {
     background: lighten(@flatlightblue, 40%);
@@ -1758,7 +1770,8 @@ div.blueprint-file-upload div.control-box a.upload-files {
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 5px!important;
     -webkit-transition: border-color 500ms, color 500ms, background-color 500ms;
     transition: border-color 500ms, color 500ms, background-color 500ms;
 }
@@ -1832,14 +1845,14 @@ div.blueprint-file-upload div.control-box a.upload-files {
     background: @flatblue;
     box-sizing: unset;
     padding-top: 0px !important;
-    height: 20px;
+    height: 30px;
     border: 1px solid @flatblue;
     font-size: 14px;
     color: @flatwhite;
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     margin-top: -2px;
@@ -1864,20 +1877,24 @@ div.blueprint-file-upload div.control-box a.upload-files {
     background: transparent;
     color: @flatwhite;
     display: none;
-    margin-right: 5px;
+    vertical-align: middle!important;
+    padding: 5px!important;
+    padding-top: 7px!important;
 }
 
 .blueprint-grid-paging-bar .prev-image-icon {
     background: transparent;
     color: @flatwhite;
     display: none;
-    margin-left: 10px;
+    vertical-align: middle!important;
+    padding: 5px!important;
+    padding-top: 7px!important;
 }
 
 .blueprint-grid-paging-bar .export-image-icon {
     position: unset !important;
     background: transparent;
-    margin-left: 5px !important;
+    padding: 5px !important;
 }
 
 .blueprint-grid-paging-bar .export-image-icon:after {
@@ -3547,6 +3564,12 @@ div.office-copy-file-upload div.control-box a.upload-files {
 
 /*/ Grid Cells /*/
 
+.office-copy-grid .cell > div {
+    min-width: 100%;
+    padding: 0px!important;
+    text-overflow: ellipsis;
+}
+
 .office-copy-grid .cell.even {
     background: lighten(@officecopygray, 40%);
 }
@@ -3562,7 +3585,8 @@ div.office-copy-file-upload div.control-box a.upload-files {
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 5px!important;
     -webkit-transition: border-color 500ms, color 500ms, background-color 500ms;
     transition: border-color 500ms, color 500ms, background-color 500ms;
 }
@@ -3643,7 +3667,7 @@ div.office-copy-file-upload div.control-box a.upload-files {
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     border-radius: 9px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
