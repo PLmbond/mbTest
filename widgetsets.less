@@ -1749,14 +1749,13 @@ div.blueprint-file-upload div.control-box a.upload-files {
 }
 
 /*/ Grid Cells /*/
-.blueprint-grid .cell > div {
+.blueprint-grid .cell > div:not([style~='n-resize;']):not([style~='s-resize;']):not([style~='e-resize;']):not([style~='w-resize;']):not([style~='ne-resize;']):not([style~='nw-resize;']):not([style~='se-resize;']):not([style~='sw-resize;']):not([class]) {
     min-width: 100%;
     padding: 0px!important;
-    text-overflow: ellipsis;
 }
 
 .blueprint-grid .cell.even {
-    background: lighten(@flatlightblue, 40%);
+    background: @flat40blue;
 }
 
 .blueprint-grid .cell.odd {
@@ -1810,9 +1809,11 @@ div.blueprint-file-upload div.control-box a.upload-files {
 /* Track */
 
 .pui-scrollbar.blueprint-grid-pui-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
+    background: @flat40blue;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
+    border-top: 1px solid @flatblue;
+    border-bottom: 1px solid @flatblue;
 }
 
 /* Handle */
@@ -1820,6 +1821,8 @@ div.blueprint-file-upload div.control-box a.upload-files {
 .pui-scrollbar.blueprint-grid-pui-scrollbar::-webkit-scrollbar-thumb {
     background: @flatlightblue;
     border-bottom-right-radius: 2px;
+    border-top: 1px solid @flatblue;
+    border-bottom: 1px solid @flatblue;
 }
 
 /* Handle on hover */
@@ -1834,8 +1837,20 @@ div.blueprint-file-upload div.control-box a.upload-files {
     border-color: transparent;
 }
 
+.blueprint-grid-vline.grid-drop-target {
+    border-color: @flatblue;
+    border-style: dashed;
+    box-sizing: border-box;
+}
+
 .blueprint-grid-hline {
     border-color: transparent;
+}
+
+.blueprint-grid-hline.grid-drop-target {
+    border-top-color: @flatblue!important;
+    border-style: dashed;
+    box-sizing: border-box;
 }
 
 /*/ Grid Paging Bar /*/
@@ -1852,7 +1867,7 @@ div.blueprint-file-upload div.control-box a.upload-files {
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
     margin-top: -2px;
@@ -1866,7 +1881,8 @@ div.blueprint-file-upload div.control-box a.upload-files {
 
 .blueprint-grid-paging-bar .next-paging-link {
     text-align: right;
-    padding-left: 10px;
+    padding-left: 30px;
+    padding-right: 5px;
 }
 .blueprint-grid-paging-bar .previous-paging-link {
     text-align: left;
@@ -1890,7 +1906,10 @@ div.blueprint-file-upload div.control-box a.upload-files {
     padding: 5px!important;
     padding-top: 7px!important;
 }
-
+.blueprint-grid-paging-bar.paging-bar .xlsx-paging-link.paging-link,
+.blueprint-grid-paging-bar.paging-bar .csv-paging-link.paging-link {
+    padding-right: 10px;
+}
 .blueprint-grid-paging-bar .export-image-icon {
     position: unset !important;
     background: transparent;
@@ -1927,7 +1946,6 @@ div.blueprint-file-upload div.control-box a.upload-files {
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
     color: @flatwhite;
-    padding-left: 2px;
     content: "arrow_back_ios";
 }
 
@@ -1937,7 +1955,6 @@ div.blueprint-file-upload div.control-box a.upload-files {
     text-rendering: optimizeLegibility;
     color: @flatwhite;
     box-sizing: border-box;
-    padding-left: 5px;
     content: "arrow_forward_ios";
 }
 
@@ -3564,7 +3581,7 @@ div.office-copy-file-upload div.control-box a.upload-files {
 
 /*/ Grid Cells /*/
 
-.office-copy-grid .cell > div {
+.office-copy-grid .cell > div:not([style~='n-resize;']):not([style~='s-resize;']):not([style~='e-resize;']):not([style~='w-resize;']):not([style~='ne-resize;']):not([style~='nw-resize;']):not([style~='se-resize;']):not([style~='sw-resize;']):not([class]) {
     min-width: 100%;
     padding: 0px!important;
     text-overflow: ellipsis;
