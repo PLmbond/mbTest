@@ -15,6 +15,7 @@
 @flatlightyellow: #F1C40F;
 @flatlightblue: #3498DB;
 @flatlightpurple: #9B59B6;
+@flathotpurple: #b79;
 @flatlightteal: #2AA198;
 @flatlightgray: #ECF0F1;
 @flatwhite: #FFFFFF;
@@ -1174,8 +1175,11 @@ input.blueprint-radio-button-no-label:focus+.label-for-blueprint-radio-button-no
 .blueprint-defaults.blueprint-switch {
     border: 1px solid @flatlightblue  !important;
     max-height: unset;
+    min-height: unset;
     padding: 0px;
 }
+
+// .blueprint-defaults.blueprint-switch.blueprint-switch-disabled 
 
 .blueprint-defaults.blueprint-switch>label {
     height: 100%;
@@ -1796,7 +1800,6 @@ div.blueprint-file-upload div.control-box a.upload-files {
 .pui-scrollbar.blueprint-grid-pui-scrollbar {
     width: 15px !important;
     margin-left: 8px;
-    margin-top: -1px;
     box-sizing: border-box;
 }
 
@@ -1812,7 +1815,6 @@ div.blueprint-file-upload div.control-box a.upload-files {
     background: @flat40blue;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    border-top: 1px solid @flatblue;
     border-bottom: 1px solid @flatblue;
 }
 
@@ -1821,8 +1823,6 @@ div.blueprint-file-upload div.control-box a.upload-files {
 .pui-scrollbar.blueprint-grid-pui-scrollbar::-webkit-scrollbar-thumb {
     background: @flatlightblue;
     border-bottom-right-radius: 2px;
-    border-top: 1px solid @flatblue;
-    border-bottom: 1px solid @flatblue;
 }
 
 /* Handle on hover */
@@ -1848,7 +1848,7 @@ div.blueprint-file-upload div.control-box a.upload-files {
 }
 
 .blueprint-grid-hline.grid-drop-target {
-    border-top-color: @flatblue!important;
+    border-top-color: @matorange!important;
     border-style: dashed;
     box-sizing: border-box;
 }
@@ -1860,33 +1860,31 @@ div.blueprint-file-upload div.control-box a.upload-files {
     background: @flatblue;
     box-sizing: unset;
     padding-top: 0px !important;
-    height: 30px;
+    height: 25px;
     border: 1px solid @flatblue;
     font-size: 14px;
     color: @flatwhite;
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
-    margin-top: -2px;
+    margin-top: -1px;
     border-top-width: 2px;
 }
 
 .blueprint-grid-paging-bar .paging-link {
     color: @flatwhite;
     position: unset!important;
+    flex-grow: 1;
+    text-align: left;
 }
 
 .blueprint-grid-paging-bar .next-paging-link {
     text-align: right;
-    padding-left: 30px;
+    padding-left: 10px;
     padding-right: 5px;
-}
-.blueprint-grid-paging-bar .previous-paging-link {
-    text-align: left;
-    padding-right: 10px;
 }
 
 .blueprint-grid-paging-bar .next-image-icon {
@@ -1906,14 +1904,16 @@ div.blueprint-file-upload div.control-box a.upload-files {
     padding: 5px!important;
     padding-top: 7px!important;
 }
-.blueprint-grid-paging-bar.paging-bar .xlsx-paging-link.paging-link,
-.blueprint-grid-paging-bar.paging-bar .csv-paging-link.paging-link {
-    padding-right: 10px;
-}
+
 .blueprint-grid-paging-bar .export-image-icon {
     position: unset !important;
     background: transparent;
     padding: 5px !important;
+    top: unset!important;
+    left: unset!important;
+    height: 20px!important;
+    width: 20px!important;
+    font-size: 20px;
 }
 
 .blueprint-grid-paging-bar .export-image-icon:after {
@@ -1937,6 +1937,8 @@ div.blueprint-file-upload div.control-box a.upload-files {
 .blueprint-grid-paging-bar>span.paging-number {
     color: @flatwhite;
     font-family: "Montserrat", sans-serif !important;
+    font-size: 14px!important;
+    font-weight: 400!important;
     flex-grow: 1;
     margin: 0px;
 }
@@ -1947,6 +1949,7 @@ div.blueprint-file-upload div.control-box a.upload-files {
     text-rendering: optimizeLegibility;
     color: @flatwhite;
     content: "arrow_back_ios";
+    padding-left: 5px;
 }
 
 .blueprint-grid-paging-bar .next-image-icon:after {
@@ -2011,6 +2014,115 @@ div.blueprint-file-upload div.control-box a.upload-files {
     background: @flatyellow;
 }
 
+
+/* /////////////////////////////  /
+/* Blueprint Conversion Classes   /
+/* ///////////////////////////// */
+.blueprint-defaults.RTL {
+    direction: rtl;
+}
+
+INPUT.blueprint-defaults.PR {
+    border: 0px solid #ffffff;
+    background-image: none;
+    background-color: transparent;
+    color: gray;
+}
+
+INPUT[type="password"].blueprint-defaults.PR,
+INPUT[type="password"].blueprint-defaults.PR-UL  {
+    visibility: hidden;
+}
+
+INPUT.blueprint-defaults.PR-UL {
+    border: 0px solid #ffffff;
+    background-image: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color: gray;
+}
+
+INPUT.blueprint-defaults.ND,
+DIV.blueprint-defaults.ND {
+    display: none;
+}
+
+DIV.blueprint-defaults.BLU,
+INPUT.blueprint-defaults.BLU {
+    color: blue;
+}
+
+DIV.blueprint-defaults.GRN,
+INPUT.blueprint-defaults.GRN {
+    color: green;
+}
+
+DIV.blueprint-defaults.PNK,
+INPUT.blueprint-defaults.PNK {
+    color: fuchsia;
+}
+
+DIV.blueprint-defaults.RED,
+INPUT.blueprint-defaults.RED {
+    color: red;
+}
+
+DIV.blueprint-defaults.TRQ,
+INPUT.blueprint-defaults.TRQ {
+    color: turquoise;
+}
+
+DIV.blueprint-defaults.WHT {
+    font-weight: bold;
+    color: black;
+}
+
+INPUT.blueprint-defaults.WHT {
+    font-weight: bold;
+}
+
+DIV.blueprint-defaults.YLW {
+    color: yellow;
+    font-weight: bold;
+}
+
+INPUT.blueprint-defaults.YLW {
+    color: yellow;
+}
+
+DIV.blueprint-defaults.RI {
+    background-color: yellow;
+}
+
+INPUT.blueprint-defaults.RI {
+    background-color: yellow;
+    background-image: none;
+}
+
+DIV.blueprint-defaults.HI {
+    font-weight: bold;
+}
+
+INPUT.blueprint-defaults.HI {
+    font-weight: bold;
+}
+
+DIV.blueprint-defaults.UL {
+    text-decoration: underline
+}
+
+INPUT.blueprint-defaults.UL {
+    text-decoration: none
+}
+
+DIV.blueprint-defaults.BL {
+    color: red;
+}
+
+INPUT.blueprint-defaults.BL {
+    color: red;
+}
+
 /////////////////////////
 // OFFICE COPY SECTION //
 /////////////////////////
@@ -2059,9 +2171,9 @@ div.blueprint-file-upload div.control-box a.upload-files {
     padding: 5px;
 }
 
-/* ///////////////  /
+/* /////////////////  /
 /* office-copy Panel  /
-/* /////////////// */
+/* ///////////////// */
 
 .office-copy-panel.office-copy-defaults {
     border-radius: 9px;
@@ -3011,6 +3123,7 @@ input.office-copy-radio-button-no-label:focus+.label-for-office-copy-radio-butto
 .office-copy-defaults.office-copy-switch {
     border: 1px solid @officecopygray  !important;
     max-height: unset;
+    min-height: unset;
     padding: 0px;
 }
 
@@ -3529,9 +3642,9 @@ div.office-copy-file-upload div.control-box a.upload-files {
     display: flex;
     align-content: center;
     align-items: center;
-    overflow: hidden;
+    //overflow: hidden;
     border-style: solid;
-    border-color: @officecopyforeground;
+    //border-color: @officecopyforeground;
     border-width: 1px !important;
     background: lighten(@officecopygray, 40%);
 }
@@ -3546,11 +3659,14 @@ div.office-copy-file-upload div.control-box a.upload-files {
     display: flex;
     align-items: center;
     align-content: center;
+    padding: 3px!important;
 }
 
 .office-copy-grid .header-cell>div {
     letter-spacing: 1px;
     white-space: nowrap !important;
+    position: unset!important;
+    margin-top: 0px!important;
 }
 
 .office-copy-grid .header-cell>div>img[src='/profoundui/proddata/images/grids/descending.gif'] {
@@ -3629,7 +3745,6 @@ div.office-copy-file-upload div.control-box a.upload-files {
 .pui-scrollbar.office-copy-grid-pui-scrollbar {
     width: 15px !important;
     margin-left: 8px;
-    margin-top: -1px;
     box-sizing: border-box;
 }
 
@@ -3642,16 +3757,18 @@ div.office-copy-file-upload div.control-box a.upload-files {
 /* Track */
 
 .pui-scrollbar.office-copy-grid-pui-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-    border-top-right-radius: 9px;
-    border-bottom-right-radius: 9px;
+    background: lighten(@officecopygray, 40%);
+    // border-top-right-radius: 9px;
+    border-bottom-right-radius: 8px;
+    border-bottom: 1px solid #4e4c5b;
 }
 
 /* Handle */
 
 .pui-scrollbar.office-copy-grid-pui-scrollbar::-webkit-scrollbar-thumb {
     background: @officecopygray;
-    border-bottom-right-radius: 9px;
+    border-bottom-right-radius: 8px;
+    border-bottom: 1px solid #4e4c5b;
 }
 
 /* Handle on hover */
@@ -3670,60 +3787,83 @@ div.office-copy-file-upload div.control-box a.upload-files {
     border-color: transparent;
 }
 
+.office-copy-grid-hline.grid-drop-target {
+    border-color: @flatyellow;
+    box-sizing: border-box;
+}
+
 /*/ Grid Paging Bar /*/
 
 .office-copy-grid-paging-bar {
     font-family: "Roboto", sans-serif;
     background: @officecopyforeground;
-    box-sizing: unset;
-    padding-top: 6px !important;
-    height: 25px;
+    //box-sizing: unset;
+    //padding-top: 6px !important;
+    height: 28px;
     border: 1px solid @officecopyforeground;
     font-size: 14px;
-    color: @flatwhite;
+    //color: @flatwhite;
     display: flex;
-    align-content: center;
+    //align-content: center;
     align-items: center;
     justify-content: flex-start;
     border-radius: 9px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     z-index: 9;
-    margin-top: -6px;
+    margin-top: -7px;
 }
 
 .office-copy-grid-paging-bar .paging-link {
     color: @flatwhite;
     position: unset!important;
+    flex-grow: 1;
+    text-align: left;
 }
 
 .office-copy-grid-paging-bar .next-paging-link {
     text-align: right;
     padding-left: 10px;
+    padding-right: 5px;
 }
-.office-copy-grid-paging-bar .previous-paging-link {
-    text-align: left;
-    padding-right: 10px;
-}
+// .office-copy-grid-paging-bar .previous-paging-link {
+//     text-align: left;
+//     padding-right: 10px;
+//     flex-grow: 1;
+// }
 
 .office-copy-grid-paging-bar .next-image-icon {
     background: transparent;
     color: @flatwhite;
     display: none;
-    margin-right: 5px;
+    font-size: 17px;
+    // margin-right: 5px;
+    vertical-align: middle!important;
+    padding: 5px!important;
 }
 
 .office-copy-grid-paging-bar .prev-image-icon {
     background: transparent;
     color: @flatwhite;
     display: none;
-    margin-left: 10px;
+    font-size: 17px;
+    // margin-left: 10px;
+    vertical-align: middle!important;
+    padding: 5px!important;
 }
 
 .office-copy-grid-paging-bar .export-image-icon {
+    // position: unset !important;
+    // background: transparent;
+    // margin-left: 5px !important;
     position: unset !important;
     background: transparent;
-    margin-left: 5px !important;
+    padding: 5px !important;
+    top: unset!important;
+    left: unset!important;
+    height: 15px!important;
+    width: 20px!important;
+    font-size: 17px;
 }
 
 .office-copy-grid-paging-bar .export-image-icon:after {
@@ -3747,7 +3887,9 @@ div.office-copy-file-upload div.control-box a.upload-files {
 .office-copy-grid-paging-bar>span.paging-number {
     color: @flatwhite;
     font-family: "Roboto", sans-serif !important;
-    flex-grow: 1;
+    font-size: 14px!important;
+    font-weight: 400!important;
+    flex-grow: 3;
     margin: 0px;
 }
 
@@ -3756,7 +3898,7 @@ div.office-copy-file-upload div.control-box a.upload-files {
     font-feature-settings: 'liga';
     text-rendering: optimizeLegibility;
     color: @flatwhite;
-    padding-left: 2px;
+    padding-left: 5px;
     content: "arrow_back_ios";
 }
 
@@ -3766,7 +3908,6 @@ div.office-copy-file-upload div.control-box a.upload-files {
     text-rendering: optimizeLegibility;
     color: @flatwhite;
     box-sizing: border-box;
-    padding-left: 5px;
     content: "arrow_forward_ios";
 }
 
@@ -3786,11 +3927,9 @@ div.office-copy-file-upload div.control-box a.upload-files {
     content: "arrow_forward_ios";
 }
 
-/* /////////////////// */
-
-/* End office-copy Grid  */
-
-/* /////////////////// */
+/* ////////////////////  /
+/* End office-copy Grid  /
+/* ////////////////////  /
 
 /* office-copy Scrollbar */
 
@@ -3824,8 +3963,115 @@ div.office-copy-file-upload div.control-box a.upload-files {
     background: @flatyellow;
 }
 
-/* Shared Buttons */
+/* /////////////////////////////  /
+/* Blueprint Conversion Classes   /
+/* ///////////////////////////// */
+.office-copy-defaults.RTL {
+    direction: rtl;
+}
 
+INPUT.office-copy-defaults.PR {
+    border: 0px solid #ffffff;
+    background-image: none;
+    background-color: transparent;
+    color: gray;
+}
+
+INPUT[type="password"].office-copy-defaults.PR,
+INPUT[type="password"].office-copy-defaults.PR-UL  {
+    visibility: hidden;
+}
+
+INPUT.office-copy-defaults.PR-UL {
+    border: 0px solid #ffffff;
+    background-image: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color: gray;
+}
+
+INPUT.office-copy-defaults.ND,
+DIV.office-copy-defaults.ND {
+    display: none;
+}
+
+DIV.office-copy-defaults.BLU,
+INPUT.office-copy-defaults.BLU {
+    color: blue;
+}
+
+DIV.office-copy-defaults.GRN,
+INPUT.office-copy-defaults.GRN {
+    color: green;
+}
+
+DIV.office-copy-defaults.PNK,
+INPUT.office-copy-defaults.PNK {
+    color: fuchsia;
+}
+
+DIV.office-copy-defaults.RED,
+INPUT.office-copy-defaults.RED {
+    color: red;
+}
+
+DIV.office-copy-defaults.TRQ,
+INPUT.office-copy-defaults.TRQ {
+    color: turquoise;
+}
+
+DIV.office-copy-defaults.WHT {
+    font-weight: bold;
+    color: black;
+}
+
+INPUT.office-copy-defaults.WHT {
+    font-weight: bold;
+}
+
+DIV.office-copy-defaults.YLW {
+    color: yellow;
+    font-weight: bold;
+}
+
+INPUT.office-copy-defaults.YLW {
+    color: yellow;
+}
+
+DIV.blueprint-defaults.RI {
+    background-color: yellow;
+}
+
+INPUT.office-copy-defaults.RI {
+    background-color: yellow;
+    background-image: none;
+}
+
+DIV.office-copy-defaults.HI {
+    font-weight: bold;
+}
+
+INPUT.office-copy-defaults.HI {
+    font-weight: bold;
+}
+
+DIV.office-copy-defaults.UL {
+    text-decoration: underline
+}
+
+INPUT.office-copy-defaults.UL {
+    text-decoration: none
+}
+
+DIV.office-copy-defaults.BL {
+    color: red;
+}
+
+INPUT.office-copy-defaults.BL {
+    color: red;
+}
+
+/* Shared Buttons /
 /* yes outline */
 
 button.pui-outline-button-yes,
@@ -3926,7 +4172,6 @@ input.pui-solid-button-no:active {
 }
 
 /* yes */
-
 button.pui-outline-button-yes span,
 input.pui-outline-button-yes span,
 button.pui-solid-button-yes span,
@@ -3940,7 +4185,6 @@ input.pui-outline-button-yes:active span,
 button.pui-solid-button-yes:active span,
 input.pui-solid-button-yes:active span,
 /* no */
-
 button.pui-outline-button-no span,
 input.pui-outline-button-no span,
 button.pui-solid-button-no span,
@@ -3957,7 +4201,19 @@ input.pui-solid-button-no:active span {
     background-color: transparent;
 }
 
-/* Disabeled Buttons */
+/* Disabled Buttons */
+
+input.blueprint-defaults[class^="blueprint-button"]:disabled,
+input.office-copy-defaults[class^="office-copy-button"]:disabled,
+
+input.blueprint-alt-defaults[class^="blueprint-button"]:disabled,
+input.office-copy-alt-defaults[class^="office-copy-button"]:disabled,
+
+button.blueprint-defaults[class^="blueprint-button"]:disabled,
+button.office-copy-defaults[class^="office-copy-button"]:disabled,
+
+button.blueprint-alt-defaults[class^="blueprint-button"]:disabled,
+button.office-copy-alt-defaults[class^="office-copy-button"]:disabled,
 
 button.pui-outline-button-yes:disabled,
 button.pui-borderless-button-yes:disabled,
@@ -4020,6 +4276,18 @@ input.pui-solid-button-gray:disabled {
     cursor: not-allowed;
     border: none;
 }
+
+input.blueprint-defaults[class^="blueprint-button"]:disabled *,
+input.office-copy-defaults[class^="office-copy-button"]:disabled *,
+
+input.blueprint-alt-defaults[class^="blueprint-button"]:disabled *,
+input.office-copy-alt-defaults[class^="office-copy-button"]:disabled *,
+
+button.blueprint-defaults[class^="blueprint-button"]:disabled *,
+button.office-copy-defaults[class^="office-copy-button"]:disabled *,
+
+button.blueprint-alt-defaults[class^="blueprint-button"]:disabled *,
+button.office-copy-alt-defaults[class^="office-copy-button"]:disabled *,
 
 input.pui-outline-button-yes:disabled *,
 input.pui-borderless-button-yes:disabled *,
