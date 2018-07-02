@@ -36,7 +36,6 @@
 @flat-30white: darken(@flatwhite,30%);
 @flat-40white: darken(@flatwhite,40%);
 /* Office Copy Colors */
-
 @officecopyforeground: #4e4c5b;
 @officecopybackground: white;
 @officecopywhite: white;
@@ -2266,6 +2265,22 @@ INPUT.blueprint-defaults.BL {
     border: 1px solid @officecopyforeground;
     border-radius: 9px;
     color: @officecopyforeground;
+    box-shadow: none;
+}
+
+.office-copy-accordion-panel.office-copy-defaults .ui-btn-up-office-copy-black-header {
+    background: @flatblack;
+    border: 1px solid darken(@flatblack, 10%);
+    border-radius: 9px;
+    color: @flatwhite;
+    box-shadow: none;
+} 
+
+.office-copy-accordion-panel.office-copy-defaults .ui-btn-hover-office-copy-black-header {
+    background: @flatlightblack;
+    border: 1px solid @flatblack;
+    border-radius: 9px;
+    color: @flatwhite;
     box-shadow: none;
 }
 
