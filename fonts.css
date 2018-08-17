@@ -1,0 +1,152 @@
+/* Regular */
+@font-face {
+    font-family: 'League-Gothic-UD';
+    src: url('profoundui/userdata/leaguegothic-regular-webfont.eot');
+    src: url('profoundui/userdata/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/leaguegothic-regular-webfont.woff') format('woff'),
+         url('profoundui/userdata/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Italic */
+@font-face {
+    font-family: 'League-Gothic-UD';
+    src: url('profoundui/userdata/leaguegothic-italic-webfont.eot');
+    src: url('profoundui/userdata/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/leaguegothic-italic-webfont.woff') format('woff'),
+         url('profoundui/userdata/leaguegothic-italic-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+/* Condensed */
+@font-face {
+    font-family: 'League-Gothic-Condensed-UD';
+    src: url('profoundui/userdata/leaguegothic-condensed-regular-webfont.eot');
+    src: url('profoundui/userdata/leaguegothic-condensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/leaguegothic-condensed-regular-webfont.woff') format('woff'),
+         url('profoundui/userdata/leaguegothic-condensed-regular-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/leaguegothic-condensed-regular-webfont.svg#league_gothic_condensed-Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Condensed Italic */
+@font-face {
+    font-family: 'League-Gothic-Condensed-UD';
+    src: url('profoundui/userdata/leaguegothic-condensed-italic-webfont.eot');
+    src: url('profoundui/userdata/leaguegothic-condensed-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/leaguegothic-condensed-italic-webfont.woff') format('woff'),
+         url('profoundui/userdata/leaguegothic-condensed-italic-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/leaguegothic-condensed-italic-webfont.svg#league_gothic_condensed_itaRg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'League-Gothic-UD-Fonts';
+    src: url('profoundui/userdata/fonts/leaguegothic-regular-webfont.eot');
+    src: url('profoundui/userdata/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('profoundui/userdata/fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Italic */
+@font-face {
+    font-family: 'League-Gothic-UD-Fonts';
+    src: url('profoundui/userdata/fonts/leaguegothic-italic-webfont.eot');
+    src: url('profoundui/userdata/fonts/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/fonts/leaguegothic-italic-webfont.woff') format('woff'),
+         url('profoundui/userdata/fonts/leaguegothic-italic-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/fonts/leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+/* Condensed */
+@font-face {
+    font-family: 'League-Gothic-Condensed-UD-Fonts';
+    src: url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.eot');
+    src: url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.woff') format('woff'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.svg#league_gothic_condensed-Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Condensed Italic */
+@font-face {
+    font-family: 'League-Gothic-Condensed-UD-Fonts';
+    src: url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.eot');
+    src: url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.woff') format('woff'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.svg#league_gothic_condensed_itaRg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'League Gothic Fonts';
+    src: url('profoundui/userdata/fonts/leaguegothic-regular-webfont.eot');
+    src: url('profoundui/userdata/fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('profoundui/userdata/fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Italic */
+@font-face {
+    font-family: 'League Gothic Fonts';
+    src: url('profoundui/userdata/fonts/leaguegothic-italic-webfont.eot');
+    src: url('profoundui/userdata/fonts/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/fonts/leaguegothic-italic-webfont.woff') format('woff'),
+         url('profoundui/userdata/fonts/leaguegothic-italic-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/fonts/leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+/* Condensed */
+@font-face {
+    font-family: 'League Gothic Condensed Fonts';
+    src: url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.eot');
+    src: url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.woff') format('woff'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-regular-webfont.svg#league_gothic_condensed-Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Condensed Italic */
+@font-face {
+    font-family: 'League Gothic Condensed Fonts';
+    src: url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.eot');
+    src: url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.woff') format('woff'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.ttf') format('truetype'),
+         url('profoundui/userdata/fonts/leaguegothic-condensed-italic-webfont.svg#league_gothic_condensed_itaRg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}

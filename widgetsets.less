@@ -621,6 +621,125 @@
     content: 'forward';
 }
 
+/* //////////////////////////  /
+/* Blueprint Tab Panel Layout  /
+/* ////////////////////////// */
+
+.blueprint-defaults.blueprint-tab-panel-layout {
+    color: @flatwhite;
+    padding: 0px;
+    background: none;
+    align-items: flex-end;
+}
+
+.blueprint-defaults.blueprint-tab-panel-layout * {
+    box-sizing: border-box;
+}
+
+.blueprint-defaults.blueprint-tab-panel-layout .pui-tablayout-body div {
+    width: 100%;
+    height: calc(~"100% - 30px");
+    background: @flat40blue;
+    border-color: @flatblue;
+    border-radius: 0 3px 3px;
+    bottom: 0px;
+}
+
+.blueprint-defaults.blueprint-tab-panel-layout .pui-tablayout-hdr {
+    height: 30px;
+    margin-top: 1px;
+}
+
+.blueprint-defaults.blueprint-tab-panel-layout .selected-tab {
+    height: 100%;
+    border: 1px solid @flatblue;
+    border-bottom: none;
+    background: @flat40blue;
+    border-radius: 3px 3px 0 0;
+}
+
+.blueprint-defaults.blueprint-tab-panel-layout .selected-tab>span[istab="true"] {
+    // height: 100%;
+    color: @flatblue;
+    // width: 100%;
+    // border-color: transparent;
+    // background: transparent;
+    font-weight: bold;
+    // margin: 0px;
+    // padding-top: 6px;
+}
+
+.blueprint-defaults.blueprint-tab-panel-layout . {
+    margin: 0px;
+    border: 1px solid transparent;
+    background: @flatblue;
+    height: 22px;
+    border-radius: 3px 3px 0 0;
+}
+
+.blueprint-tab-panel-layout.blueprint-defaults>div>span:nth-child(n+2) {
+    margin-left: 3px;
+}
+
+.blueprint-defaults.blueprint-tab-panel-layout>div>span:not(.selected-tab)>span:hover {
+    color: @flatlightyellow;
+}
+
+/*/ Scrolling Arrows for Tab Panel /*/
+.blueprint-tab-panel-layout.blueprint-defaults .pui-tscrbtn {
+    height: 31px;
+}
+
+.blueprint-tab-panel-layout.blueprint-defaults .pui-tscrbtn .mid {
+    border-radius: 3px;
+    height: 100%;
+    border: 1px solid @flatblue!important;
+    background-color: @flat40blue!important;
+}
+
+.blueprint-tab-panel-layout.blueprint-defaults .pui-tscrbtn.left {
+    left: 0px;
+}
+
+.blueprint-tab-panel-layout.blueprint-defaults .pui-tscrbtn.left .mid {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    margin-left: 0px!important;
+}
+
+.blueprint-tab-panel-layout.blueprint-defaults .pui-tscrbtn.left .mid:before {
+    font-family: "Material Icons";
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    font-size: 24px;
+    background-color: transparent;
+    color: @flatblue;
+    content: 'forward';
+}
+
+.blueprint-tab-panel-layout.blueprint-defaults .pui-tscrbtn.right {
+    right: 0px;
+}
+
+.blueprint-tab-panel-layout.blueprint-defaults .pui-tscrbtn.right .mid {
+    background: @flat40blue;
+    margin-right: 0px!important;
+}
+
+.blueprint-tab-panel-layout.blueprint-defaults .pui-tscrbtn.right .mid:before {
+    font-family: "Material Icons";
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    font-size: 24px;
+    background-color: transparent;
+    color: @flatblue;
+    content: 'forward';
+}
+
 /* /////////////////  /
 /* Blueprint Buttons  /
 /* ///////////////// */
