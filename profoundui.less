@@ -1,0 +1,915 @@
+
+/* Tab Layout Widget - when no CSS class is set, styling matching Simple Tab Panel. */
+
+.pui-tablayout-hdr {
+  position: absolute;
+  height: 23px;
+  padding: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  z-index: 2;
+  font-size: 12px;
+  font-family: arial;
+  color: #333366;
+}
+
+/* Default style for tab layout uses no left/right edge styles. */
+.pui-tablayout-hdr > span > span:nth-child(1), .pui-tablayout-hdr > span > span:nth-child(3) {
+  display: none;
+}
+
+.pui-tablayout-hdr > span {
+  display: inline-block;
+}
+
+.pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 15px;
+  line-height: 15px;
+  float: left;
+  margin-left: 3px;
+  padding: 3px 0.5em;
+  border: 1px solid #aaaaaa;  
+  background-color: #b7c8f6;
+  cursor: pointer;
+}
+
+.pui-tablayout-hdr > span.selected-tab > span {
+  cursor: default;
+  border-bottom: 1px solid #eeeeff; /*blends with panel background. */
+  background-color: #eeeeff;
+}
+
+  /* Tab Layout scroll buttons don't use inline style, so set here, pui-tscrbtn. */
+span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 15px;
+  margin-left: 3px;
+  padding: 3px 0.5em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #aaaaaa #aaaaaa #eeeeff #aaaaaa;
+  background-color: #eeeeff;
+}
+
+span.pui-tscrbtn.pui-tablayout > span.edge {
+  display: none;    /* Default scroll button style uses no edge elements. */
+}
+
+.pui-tablayout-body {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 24px);
+  top: 22px;  /*make active tab's bottom border overlap bottom panel. */
+  z-index: 1;
+  padding: 0px;
+}
+
+.pui-tablayout-body > div {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  
+  border: 1px solid #aaaaaa;
+  background-color: #eeeeff;
+  overflow: hidden;
+  padding: 0px;
+}
+
+/* Tab Layout -- Block */
+div.Block > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Block > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Block > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/block/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Block > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/block/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Block > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/block/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Block > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/block/left-hi.gif");
+}
+div.Block > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/block/middle-hi.gif");
+}
+div.Block > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/block/right-hi.gif");
+}
+div.Block > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Block > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/block/left-sel.gif");
+}
+div.Block > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/block/middle-sel.gif");
+}
+div.Block > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/block/right-sel.gif");
+}
+div.Block > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Block > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/block/left-sel.gif");
+}
+div.Block > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/block/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Block > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/block/right-sel.gif");
+}
+
+div.Block > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Simple */
+div.Simple > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Simple > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Simple > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/simple/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Simple > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/simple/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Simple > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/simple/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Simple > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/simple/left-hi.gif");
+}
+div.Simple > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/simple/middle-hi.gif");
+}
+div.Simple > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/simple/right-hi.gif");
+}
+div.Simple > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Simple > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/simple/left-sel.gif");
+}
+div.Simple > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/simple/middle-sel.gif");
+}
+div.Simple > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/simple/right-sel.gif");
+}
+div.Simple > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Simple > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/simple/left-sel.gif");
+}
+div.Simple > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/simple/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Simple > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/simple/right-sel.gif");
+}
+
+div.Simple > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Classic */
+div.Classic > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Classic > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Classic > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/classic/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Classic > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/classic/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Classic > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/classic/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Classic > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/classic/left-hi.gif");
+}
+div.Classic > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/classic/middle-hi.gif");
+}
+div.Classic > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/classic/right-hi.gif");
+}
+div.Classic > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Classic > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/classic/left-sel.gif");
+}
+div.Classic > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/classic/middle-sel.gif");
+}
+div.Classic > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/classic/right-sel.gif");
+}
+div.Classic > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Classic > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/classic/left-sel.gif");
+}
+div.Classic > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/classic/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Classic > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/classic/right-sel.gif");
+}
+
+div.Classic > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Delicate */
+div.Delicate > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Delicate > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Delicate > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/delicate/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Delicate > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/delicate/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Delicate > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/delicate/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Delicate > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/delicate/left-hi.gif");
+}
+div.Delicate > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/delicate/middle-hi.gif");
+}
+div.Delicate > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/delicate/right-hi.gif");
+}
+div.Delicate > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Delicate > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/delicate/left-sel.gif");
+}
+div.Delicate > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/delicate/middle-sel.gif");
+}
+div.Delicate > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/delicate/right-sel.gif");
+}
+div.Delicate > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Delicate > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/delicate/left-sel.gif");
+}
+div.Delicate > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/delicate/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Delicate > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/delicate/right-sel.gif");
+}
+
+div.Delicate > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Angle */
+div.Angle > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Angle > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Angle > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/angle/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Angle > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/angle/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Angle > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/angle/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Angle > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/angle/left-hi.gif");
+}
+div.Angle > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/angle/middle-hi.gif");
+}
+div.Angle > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/angle/right-hi.gif");
+}
+div.Angle > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Angle > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/angle/left-sel.gif");
+}
+div.Angle > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/angle/middle-sel.gif");
+}
+div.Angle > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/angle/right-sel.gif");
+}
+div.Angle > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Angle > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/angle/left-sel.gif");
+}
+div.Angle > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/angle/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Angle > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/angle/right-sel.gif");
+}
+
+div.Angle > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Concrete */
+div.Concrete > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Concrete > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Concrete > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/concrete/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Concrete > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/concrete/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Concrete > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/concrete/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Concrete > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/concrete/left-hi.gif");
+}
+div.Concrete > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/concrete/middle-hi.gif");
+}
+div.Concrete > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/concrete/right-hi.gif");
+}
+div.Concrete > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Concrete > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/concrete/left-sel.gif");
+}
+div.Concrete > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/concrete/middle-sel.gif");
+}
+div.Concrete > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/concrete/right-sel.gif");
+}
+div.Concrete > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Concrete > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/concrete/left-sel.gif");
+}
+div.Concrete > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/concrete/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Concrete > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/concrete/right-sel.gif");
+}
+
+div.Concrete > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Glow */
+div.Glow > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Glow > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Glow > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/glow/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Glow > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/glow/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Glow > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/glow/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Glow > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/glow/left-hi.gif");
+}
+div.Glow > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/glow/middle-hi.gif");
+}
+div.Glow > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/glow/right-hi.gif");
+}
+div.Glow > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Glow > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/glow/left-sel.gif");
+}
+div.Glow > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/glow/middle-sel.gif");
+}
+div.Glow > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/glow/right-sel.gif");
+}
+div.Glow > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Glow > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/glow/left-sel.gif");
+}
+div.Glow > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/glow/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Glow > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/glow/right-sel.gif");
+}
+
+div.Glow > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Smooth */
+div.Smooth > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Smooth > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Smooth > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/smooth/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Smooth > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/smooth/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Smooth > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/smooth/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Smooth > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/smooth/left-hi.gif");
+}
+div.Smooth > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/smooth/middle-hi.gif");
+}
+div.Smooth > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/smooth/right-hi.gif");
+}
+div.Smooth > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Smooth > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/smooth/left-sel.gif");
+}
+div.Smooth > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/smooth/middle-sel.gif");
+}
+div.Smooth > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/smooth/right-sel.gif");
+}
+div.Smooth > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Smooth > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/smooth/left-sel.gif");
+}
+div.Smooth > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/smooth/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Smooth > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/smooth/right-sel.gif");
+}
+
+div.Smooth > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Sky */
+div.Sky > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Sky > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Sky > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/sky/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Sky > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/sky/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Sky > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/sky/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Sky > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/sky/left-hi.gif");
+}
+div.Sky > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/sky/middle-hi.gif");
+}
+div.Sky > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/sky/right-hi.gif");
+}
+div.Sky > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Sky > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/sky/left-sel.gif");
+}
+div.Sky > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/sky/middle-sel.gif");
+}
+div.Sky > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/sky/right-sel.gif");
+}
+div.Sky > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Sky > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/sky/left-sel.gif");
+}
+div.Sky > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/sky/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Sky > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/sky/right-sel.gif");
+}
+
+div.Sky > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Block */
+div.Block > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Block > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Block > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/block/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Block > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/block/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Block > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/block/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Block > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/block/left-hi.gif");
+}
+div.Block > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/block/middle-hi.gif");
+}
+div.Block > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/block/right-hi.gif");
+}
+div.Block > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Block > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/block/left-sel.gif");
+}
+div.Block > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/block/middle-sel.gif");
+}
+div.Block > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/block/right-sel.gif");
+}
+div.Block > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Block > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/block/left-sel.gif");
+}
+div.Block > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/block/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Block > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/block/right-sel.gif");
+}
+
+div.Block > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
+
+/* Tab Layout -- Glass */
+div.Glass > .pui-tablayout-hdr {
+  height: 23px;
+}
+div.Glass > .pui-tablayout-hdr > span > span {
+  display: inline-block;
+  height: 23px;
+  margin-left: 0px;
+  border: none;
+  padding: 2px 0px 0px 0px;
+}
+div.Glass > .pui-tablayout-hdr > span > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/glass/left.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+  margin-left: 3px;
+}
+div.Glass > .pui-tablayout-hdr > span > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/glass/middle.gif");
+  background-repeat: repeat-x;
+  height: 21px;
+  line-height: 21px;
+  padding: 2px 0.5em;
+}
+div.Glass > .pui-tablayout-hdr > span > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/glass/right.gif");
+  background-repeat: no-repeat;
+  width: 3px;
+}
+div.Glass > .pui-tablayout-hdr > span:hover > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/glass/left-hi.gif");
+}
+div.Glass > .pui-tablayout-hdr > span:hover > span:nth-child(2) {
+  background-image: url("/profoundui/proddata/images/tabs/glass/middle-hi.gif");
+}
+div.Glass > .pui-tablayout-hdr > span:hover > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/glass/right-hi.gif");
+}
+div.Glass > .pui-tablayout-hdr > span.selected-tab > span { background-color: #deecfd; }
+div.Glass > .pui-tablayout-hdr > span.selected-tab > span:nth-child(1){
+  background-image: url("/profoundui/proddata/images/tabs/glass/left-sel.gif");
+}
+div.Glass > .pui-tablayout-hdr > span.selected-tab > span:nth-child(2){
+  background-image: url("/profoundui/proddata/images/tabs/glass/middle-sel.gif");
+}
+div.Glass > .pui-tablayout-hdr > span.selected-tab > span:nth-child(3){
+  background-image: url("/profoundui/proddata/images/tabs/glass/right-sel.gif");
+}
+div.Glass > span.pui-tscrbtn.pui-tablayout > span.edge {
+ display: inline-block;
+ height: 21px;
+ width: 3px;
+ background-color: #deecfd;
+}
+div.Glass > span.pui-tscrbtn.pui-tablayout > span:nth-child(1) {
+  background-image: url("/profoundui/proddata/images/tabs/glass/left-sel.gif");
+}
+div.Glass > span.pui-tscrbtn.pui-tablayout > span.mid {
+  height: 19px;
+  background-image: url("/profoundui/proddata/images/tabs/glass/middle-sel.gif");
+  background-repeat: repeat-x;
+  padding: 4px 0.5em 0px;
+  background-color: #deecfd;
+  margin-left: 0px;
+  border: none;
+}
+
+div.Glass > span.pui-tscrbtn.pui-tablayout > span:nth-child(3) {
+  background-image: url("/profoundui/proddata/images/tabs/glass/right-sel.gif");
+}
+
+div.Glass > .pui-tablayout-body > div {
+  border: 1px solid #8db2e3;
+  background-color: #deecfd;
+}
