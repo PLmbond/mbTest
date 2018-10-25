@@ -1,0 +1,246 @@
+button.pui-outline-button-yes,
+input.pui-outline-button-yes {
+  color: #27AE60;
+  background-color: rgba(46, 204, 113, .3);
+  border: 2px outset #2ECC71;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden
+}
+
+button.pui-outline-button-yes:hover,
+input.pui-outline-button-yes:hover {
+  background-color: rgba(46, 204, 113, .1)
+}
+
+button.pui-outline-button-yes:active,
+input.pui-outline-button-yes:active {
+  background-color: rgba(39, 174, 96, .3);
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+  border: 2px inset #27AE60
+}
+
+button.pui-solid-button-yes,
+input.pui-solid-button-yes {
+  background-color: #2ECC71;
+  color: #FFF;
+  border: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden
+}
+
+button.pui-solid-button-yes:hover,
+input.pui-solid-button-yes:hover {
+  background-color: #54d98c
+}
+
+button.pui-solid-button-yes:active,
+input.pui-solid-button-yes:active {
+  background-color: #27AE60;
+  color: #e6e6e6;
+  border: none;
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px)
+}
+
+button.pui-outline-button-no,
+input.pui-outline-button-no {
+  color: #C0392B;
+  background-color: rgba(231, 76, 60, .2);
+  border: 2px outset #E74C3C;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden
+}
+
+button.pui-outline-button-no:hover,
+input.pui-outline-button-no:hover {
+  background-color: rgba(231, 76, 60, .1)
+}
+
+button.pui-outline-button-no:active,
+input.pui-outline-button-no:active {
+  color: #C0392B;
+  background-color: rgba(192, 57, 43, .3);
+  border: 2px inset #C0392B;
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px)
+}
+
+button.pui-solid-button-no,
+input.pui-solid-button-no {
+  background-color: #E74C3C;
+  color: #FFF;
+  border: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden
+}
+
+button.pui-solid-button-no:hover,
+input.pui-solid-button-no:hover {
+  background-color: #ea6153
+}
+
+button.pui-solid-button-no:active,
+input.pui-solid-button-no:active {
+  background-color: #C0392B;
+  color: #e6e6e6;
+  border: none;
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px)
+}
+
+button.pui-outline-button-no span,
+button.pui-outline-button-no:active span,
+button.pui-outline-button-no:hover span,
+button.pui-outline-button-yes span,
+button.pui-outline-button-yes:active span,
+button.pui-outline-button-yes:hover span,
+button.pui-solid-button-no span,
+button.pui-solid-button-no:active span,
+button.pui-solid-button-no:hover span,
+button.pui-solid-button-yes span,
+button.pui-solid-button-yes:active span,
+button.pui-solid-button-yes:hover span,
+input.pui-outline-button-no span,
+input.pui-outline-button-no:active span,
+input.pui-outline-button-no:hover span,
+input.pui-outline-button-yes span,
+input.pui-outline-button-yes:active span,
+input.pui-outline-button-yes:hover span,
+input.pui-solid-button-no span,
+input.pui-solid-button-no:active span,
+input.pui-solid-button-no:hover span,
+input.pui-solid-button-yes span,
+input.pui-solid-button-yes:active span,
+input.pui-solid-button-yes:hover span {
+  border: none;
+  background-color: transparent
+}
+
+button.blueprint-alt-defaults[class^=blueprint-button]:disabled,
+button.blueprint-defaults[class^=blueprint-button]:disabled,
+button.office-copy-alt-defaults[class^=office-copy-button]:disabled,
+button.office-copy-defaults[class^=office-copy-button]:disabled,
+button.pui-borderless-button-black:disabled,
+button.pui-borderless-button-caution:disabled,
+button.pui-borderless-button-gray:disabled,
+button.pui-borderless-button-info:disabled,
+button.pui-borderless-button-no:disabled,
+button.pui-borderless-button-warning:disabled,
+button.pui-borderless-button-yes:disabled,
+button.pui-outline-button-black:disabled,
+button.pui-outline-button-caution:disabled,
+button.pui-outline-button-gray:disabled,
+button.pui-outline-button-info:disabled,
+button.pui-outline-button-no:disabled,
+button.pui-outline-button-warning:disabled,
+button.pui-outline-button-yes:disabled,
+button.pui-solid-button-black:disabled,
+button.pui-solid-button-caution:disabled,
+button.pui-solid-button-gray:disabled,
+button.pui-solid-button-info:disabled,
+button.pui-solid-button-no :disabled,
+button.pui-solid-button-no:disabled,
+button.pui-solid-button-warning:disabled,
+button.pui-solid-button-yes:disabled,
+input.blueprint-alt-defaults[class^=blueprint-button]:disabled,
+input.blueprint-defaults[class^=blueprint-button]:disabled,
+input.office-copy-alt-defaults[class^=office-copy-button]:disabled,
+input.office-copy-defaults[class^=office-copy-button]:disabled,
+input.pui-borderless-button-black:disabled,
+input.pui-borderless-button-caution:disabled,
+input.pui-borderless-button-gray:disabled,
+input.pui-borderless-button-info:disabled,
+input.pui-borderless-button-no:disabled,
+input.pui-borderless-button-warning:disabled,
+input.pui-borderless-button-yes:disabled,
+input.pui-outline-button-black:disabled,
+input.pui-outline-button-caution:disabled,
+input.pui-outline-button-gray:disabled,
+input.pui-outline-button-info:disabled,
+input.pui-outline-button-no:disabled,
+input.pui-outline-button-warning:disabled,
+input.pui-outline-button-yes:disabled,
+input.pui-solid-button-black:disabled,
+input.pui-solid-button-caution:disabled,
+input.pui-solid-button-gray:disabled,
+input.pui-solid-button-info:disabled,
+input.pui-solid-button-no :disabled,
+input.pui-solid-button-no:disabled,
+input.pui-solid-button-warning:disabled,
+input.pui-solid-button-yes:disabled {
+  color: #4e4c5b;
+  background: #BDC3C7;
+  cursor: not-allowed;
+  border: none
+}
+
+button.blueprint-alt-defaults[class^=blueprint-button]:disabled *,
+button.blueprint-defaults[class^=blueprint-button]:disabled *,
+button.office-copy-alt-defaults[class^=office-copy-button]:disabled *,
+button.office-copy-defaults[class^=office-copy-button]:disabled *,
+button.pui-borderless-button-black:disabled *,
+button.pui-borderless-button-caution:disabled *,
+button.pui-borderless-button-gray:disabled *,
+button.pui-borderless-button-info:disabled *,
+button.pui-borderless-button-no:disabled *,
+button.pui-borderless-button-warning:disabled *,
+button.pui-borderless-button-yes:disabled *,
+button.pui-outline-button-black:disabled *,
+button.pui-outline-button-caution:disabled *,
+button.pui-outline-button-gray:disabled *,
+button.pui-outline-button-info:disabled *,
+button.pui-outline-button-no:disabled *,
+button.pui-outline-button-warning:disabled *,
+button.pui-outline-button-yes:disabled *,
+button.pui-solid-button-black:disabled *,
+button.pui-solid-button-caution:disabled *,
+button.pui-solid-button-gray:disabled *,
+button.pui-solid-button-info:disabled *,
+button.pui-solid-button-no :disabled *,
+button.pui-solid-button-no:disabled *,
+button.pui-solid-button-warning:disabled *,
+button.pui-solid-button-yes:disabled *,
+input.blueprint-alt-defaults[class^=blueprint-button]:disabled *,
+input.blueprint-defaults[class^=blueprint-button]:disabled *,
+input.office-copy-alt-defaults[class^=office-copy-button]:disabled *,
+input.office-copy-defaults[class^=office-copy-button]:disabled *,
+input.pui-borderless-button-black:disabled *,
+input.pui-borderless-button-caution:disabled *,
+input.pui-borderless-button-gray:disabled *,
+input.pui-borderless-button-info:disabled *,
+input.pui-borderless-button-no:disabled *,
+input.pui-borderless-button-warning:disabled *,
+input.pui-borderless-button-yes:disabled *,
+input.pui-outline-button-black:disabled *,
+input.pui-outline-button-caution:disabled *,
+input.pui-outline-button-gray:disabled *,
+input.pui-outline-button-info:disabled *,
+input.pui-outline-button-no:disabled *,
+input.pui-outline-button-warning:disabled *,
+input.pui-outline-button-yes:disabled *,
+input.pui-solid-button-black:disabled *,
+input.pui-solid-button-caution:disabled *,
+input.pui-solid-button-gray:disabled *,
+input.pui-solid-button-info:disabled *,
+input.pui-solid-button-no :disabled *,
+input.pui-solid-button-no:disabled *,
+input.pui-solid-button-warning:disabled *,
+input.pui-solid-button-yes:disabled * {
+  color: #4e4c5b;
+  border: none;
+  background-color: transparent;
+  cursor: not-allowed
+}
