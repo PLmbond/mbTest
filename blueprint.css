@@ -162,6 +162,16 @@ input.blueprint-radio-button:focus+.label-for-blueprint-radio-button {
   box-shadow: none
 }
 
+.ui-btn-up-blueprint-darkred-header {
+  background: #b22222;
+  border: 1px solid #b22222;
+  border-bottom: 1px solid #b22222;
+  border-radius: 3px;
+  color: #FFF;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
 .blueprint-panel.blueprint-defaults .ui-btn-inner.ui-btn-corner-all {
   border: none
 }
